@@ -39,8 +39,8 @@ app.put("/", async (req, res) => {
 });
 
 app.delete("/:id", async (req, res) => {
-    const id = req.params.id;
-    const userData = await userModel.deleteOne({ _id: id });
+    const _id = req.params.id;
+    const userData = await userModel.deleteOne({ _id: _id });
     res.send({ message: "Deleted", success: true, data: userData });
 });
 
